@@ -5,6 +5,13 @@
     "image_width" : 8,
     "image_height" : 5,
     "image_resolution": 900,
-    "point_transparency": 0.75
-    
+    "point_transparency": 0.75,
+    "n_random_controls_per_n_sites": 10,
+    "n_bins_used": 50,
+    "violin_plots_parameters" : {
+    	"height" : 5,
+    	"width" : 5,
+    	"dpi" : 400
+	}
+
 }
