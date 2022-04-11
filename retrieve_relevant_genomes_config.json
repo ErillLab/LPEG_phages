@@ -1,0 +1,33 @@
+{
+	"analysis_name" : "name_this_run",
+	
+	"proteins_filename" : "delta_phage_proteins.txt",
+	
+	"blast_parameters" : {
+    	
+    	"database" : "nr",
+    	"taxid" : 10239,
+    	"eval_threshold" : 1E-10,
+    	"qcov_threshold" : 0.75,
+    	"minimum_genome_length" : 10000,
+    	"attempts_limit" : 5
+    	
+	},
+	
+	"entrez_parameters" : {
+    	   	
+    	"email" : "your@email.address",
+    	"api_key" : null,
+    	"sleep_time" : 1
+	
+	},
+	
+	"alpha_phages_file_name" : "alphaproteobacteria_phages_list.json",
+
+	"plitropic_phages_file_name" : "pilitropic_phages_list.json",
+	
+	"flagellotropic_phages_file_name" : "flagellotropic_phages_list.json",
+	
+	"use_tblastn_hits_from_previous_run" : false
+	
+}
