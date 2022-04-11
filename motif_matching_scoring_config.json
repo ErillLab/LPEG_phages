@@ -1,0 +1,21 @@
+{
+    "analysis_name" : "name_of_the_run",
+    
+    "TF_name" : "CtrA",
+    
+    "binding_sites_filename" : "binding_sites_CtrA.json",
+    
+    "pseudocount_value" : 0.5,
+    
+    "entrez_parameters" : {
+    	   	
+    	"email" : "your@email.address",
+    	"api_key" : null,
+    	"sleep_time" : 1,
+        "attempts_limit" : 7
+	
+    },
+    
+    "draw_genomes_from_previous_run" : false
+
+}

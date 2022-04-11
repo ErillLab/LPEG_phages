@@ -1,0 +1,10 @@
+{
+
+    "analysis_name" : "name_of_the_run",
+    "lpeg_threshold" : 0.75,
+    "image_width" : 8,
+    "image_height" : 5,
+    "image_resolution": 900,
+    "point_transparency": 0.75
+    
+}

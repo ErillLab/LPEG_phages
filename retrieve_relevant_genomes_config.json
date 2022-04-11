@@ -1,5 +1,5 @@
 {
-	"analysis_name" : "name_this_run",
+	"analysis_name" : "name_of_the_run",
 	
 	"proteins_filename" : "delta_phage_proteins.txt",
 	

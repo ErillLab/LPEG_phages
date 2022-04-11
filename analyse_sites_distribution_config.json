@@ -1,0 +1,16 @@
+{
+    
+    "analysis_name" : "name_of_the_run",
+    
+    "n_bins" : 50,
+    
+    "n_sites_threshold" : 6,
+    
+    "remove_term_repeat" : true,
+    
+    "use_double_binning" : true,
+    
+    "lpeg_threshold" : 0.75
+
+}
+
