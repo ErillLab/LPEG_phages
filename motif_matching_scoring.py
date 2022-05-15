@@ -167,9 +167,9 @@ def gene_to_site_distance(g_left, g_right, g_strand, site_pos, site_length,
     else:
         # Reduce the absoulte value of the distance by  edge_to_center
         if gene_to_siteCenter > 0:
-            gene_to_siteEdge = gene_to_siteCenter - edge_to_center
+            gene_to_siteEdge = round(gene_to_siteCenter - edge_to_center)
         else:
-            gene_to_siteEdge = gene_to_siteCenter + edge_to_center
+            gene_to_siteEdge = round(gene_to_siteCenter + edge_to_center)
         distance = gene_to_siteEdge
     
     if distance < 0:
