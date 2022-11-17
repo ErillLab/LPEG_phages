@@ -1,11 +1,9 @@
 # LPEG phages
-Code and data used to generate the results in Mascolo *et al*. (2022).
+Code and data used to generate the results in [Mascolo *et al*. (2022)](http://journal.frontiersin.org/article/10.3389/fmicb.2022.918015/full?&utm_source=Email_to_authors_&utm_medium=Email&utm_content=T1_11.5e1_author&utm_campaign=Email_publication&field=&journalName=Frontiers_in_Microbiology&id=918015).
 
 **Reference**
 
-E. Mascolo *et al.*, “The transcriptional regulator CtrA controls gene expression in Alphaproteobacteria phages: Evidence for a lytic deferment pathway,” *Front Microbiol*, vol. 0, p. 2999, 2022, doi: 10.3389/FMICB.2022.918015.
-
-[Link to paper](http://journal.frontiersin.org/article/10.3389/fmicb.2022.918015/full?&utm_source=Email_to_authors_&utm_medium=Email&utm_content=T1_11.5e1_author&utm_campaign=Email_publication&field=&journalName=Frontiers_in_Microbiology&id=918015)
+E. Mascolo *et al.*, “The transcriptional regulator CtrA controls gene expression in Alphaproteobacteria phages: Evidence for a lytic deferment pathway,” *Frontiers in Microbiology*, vol. 13, 2022, doi: 10.3389/FMICB.2022.918015.
 
 ## Short description
 Code used for the analysis of TF-binding sites in bacteriophage genomes.  
