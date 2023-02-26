@@ -301,6 +301,7 @@ def organize_genomes_by_taxid(genomes):
 
 
 def loop_over_failed_searches(info_table, failed_list):
+    ''' Re-runs the tblastn_search function until failed_list stops shrinking. ''' 
     
     # While loop to try again failed searches
     failed_list_old = []
@@ -325,6 +326,8 @@ def loop_over_failed_searches(info_table, failed_list):
             print('\nRemoving file ' + f)
             filepath = os.path.join(RRG_out_dir, f)
             os.remove(filepath)
+    
+    return info_table, failed_list
 
 
 def select_one_genome_per_taxid(taxid_to_accessions):
@@ -385,24 +388,7 @@ def main():
         info_table, failed_list = tblastn_search(proteins)
         
         # Try again with the failed searches until failed_list stops shrinking
-        loop_over_failed_searches(info_table, failed_list)
-        
-        '''
-        # While loop to try again failed searches
-        failed_list_old = []
-        c = 0
-        while failed_list != failed_list_old:
-            print('tblastn_search iteration {}:\t{} failed tBLASTn queries'.format(
-                c, len(failed_list))
-            )
-            failed_list_old = failed_list
-            c += 1
-            info_table_to_add, failed_list = tblastn_search(failed_list_old, str(c))
-            # Add new hits to info_table
-            if isinstance(info_table_to_add, pd.DataFrame):
-                if len(info_table_to_add) != 0:
-                    info_table = pd.concat([info_table, info_table_to_add])
-        '''
+        info_table, failed_list = loop_over_failed_searches(info_table, failed_list)
         
         # If there are still failed searches after the while loop, report them
         if len(failed_list) > 0:
@@ -412,15 +398,6 @@ def main():
             with open(failed_filepath, 'w') as outfile:
                 json.dump(failed_list, outfile)
         
-        '''
-        # Clean up temporary tBLASTn tables
-        analysis_dir_content = os.listdir(RRG_out_dir)
-        for f in analysis_dir_content:
-            if f[:4] == 'tmp_' and f[-15:] == '_Info_Table.tsv':
-                print('\nRemoving file ' + f)
-                filepath = os.path.join(RRG_out_dir, f)
-                os.remove(filepath)
-        '''
         # Hit genomes
         tblastn_accessions = list(info_table['Hit genome accession'])
         tblastn_accessions = list(set(tblastn_accessions))  # Remove duplicates
